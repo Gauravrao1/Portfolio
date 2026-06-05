@@ -6,9 +6,11 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I am Gaurav Rao, a B.Tech Computer Science student specializing in
+          Data Science and Artificial Intelligence. I enjoy building practical
+          solutions with code, exploring AI and analytics, and sharpening my
+          problem-solving skills through projects, hackathons, and continuous
+          learning.
         </p>
       </div>
     </div>
