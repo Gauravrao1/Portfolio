@@ -1,65 +1,41 @@
-# My Portfolio Website - Overview 🚀
+# Gaurav Rao Portfolio Website - Overview 🚀
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
-
----
+This repository contains the open-source version of my personal portfolio website.
+It showcases my work across AI, data science, software development, DSA, and hackathons.
 
 ## ⚠️ Usage Notice
 
-This project is shared for learning purposes only.
+This project is shared for learning and personal showcase purposes.
 
 Please do NOT:
+
 - Clone or replicate the full website or design
 - Repost it with minor content changes
 - Use this project for commercial/client work
 - Create tutorials or content using this exact project
 
-If you use parts of the code, you must provide proper credit linking back to the original repository.
+If you use parts of the code, please provide proper credit linking back to the original repository.
 
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
-
----
+Build your own version, do not just copy.
 
 ## 🛠️ Instructions
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
+The project uses GSAP trial plugins for the current animation setup.
+For production use, switch to the official GSAP Club plugins.
 
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
-
----
+<https://gsap.com/docs/v3/Installation/>
 
 ## ⚙️ Tech Stack
 
 React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
 
----
-
 ## 🎨 Assets Usage
 
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
+Some 3D assets included in this repository are used for learning and presentation purposes.
+If you reuse the code, replace the assets with your own work or licensed assets.
 
 ## 📄 License
 
 This project is licensed under the Personal Portfolio License (PPL) v1.0.
 
-See the LICENSE file for full details
-
+See the LICENSE file for full details.
