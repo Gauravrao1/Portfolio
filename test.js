@@ -3,7 +3,7 @@ let endListener = false;
 clickElement.addEventListener("click", () => {
   if (endListener) {
     endListener = false;
-  } else {
+  } else { 
     endListener = true;
   }
 });
