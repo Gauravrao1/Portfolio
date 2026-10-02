@@ -27,7 +27,7 @@ const achievements = [
     title: "IIT Kharagpur Hackathon",
     detail: "Participant",
     description:
-      "Competed at one of India's top technical institutes on a real-world problem statement.",
+      "Competed at one of India's top technical institutes on a real-world problem statement make Rag system using Pathways who give verdict insted of hallucination",
   },
   {
     icon: "⭐",
@@ -39,7 +39,7 @@ const achievements = [
 ];
 
 const codingStats = [
-  { label: "GitHub Repos", value: "67+" },
+  { label: "GitHub Repos", value: "Active" },
   { label: "LeetCode", value: "Active" },
   { label: "HackerRank", value: "5★ Java" },
   { label: "GitHub Stars", value: "23+" },

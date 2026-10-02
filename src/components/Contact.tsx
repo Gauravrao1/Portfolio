@@ -47,7 +47,7 @@ const Contact = () => {
               LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://leetcode.com/u/gauravrao6/"
+              href="https://leetcode.com/u/gauravrao_1/"
               target="_blank"
               data-cursor="disable"
               rel="noreferrer"
@@ -56,7 +56,7 @@ const Contact = () => {
               LeetCode <MdArrowOutward />
             </a>
             <a
-              href="https://www.hackerrank.com/profile/gauravrao6"
+              href="https://www.hackerrank.com/profile/gauravraorao6"
               target="_blank"
               data-cursor="disable"
               rel="noreferrer"

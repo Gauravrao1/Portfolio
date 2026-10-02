@@ -32,7 +32,7 @@ const Career = () => {
                 <h4>Analysis Intern</h4>
                 <h5>TechDocks Labs — Lucknow</h5>
               </div>
-              <h3>2025</h3>
+              <h3>2026</h3>
             </div>
             <p>
               Worked on data processing, validation, and dashboard development
@@ -46,7 +46,7 @@ const Career = () => {
                 <h4>Hackathons &amp; Innovation</h4>
                 <h5>IBM Technovate Winner • India AI Finalist</h5>
               </div>
-              <h3>2024–25</h3>
+              <h3>2025–26</h3>
             </div>
             <p>
               Won IBM Technovate Hackathon. National finalist at India AI Impact

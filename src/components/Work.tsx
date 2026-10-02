@@ -15,7 +15,8 @@ const projects = [
     tools: "Python, PyTorch, PointNet, SemanticKITTI, Plotly, Dash",
     highlights: "Semantic Segmentation • Adaptive Resolution • 2.5D Grid • Visualization",
     status: "In Progress",
-    image: "/images/airpollution (2).png",
+    image: "/images/Adaptive.png",
+    
   },
   {
     title: "Med-Sathi — Healthcare Platform",
@@ -25,7 +26,7 @@ const projects = [
     tools: "TypeScript, React, Node.js, REST APIs",
     highlights: "Healthcare • Full-Stack • TypeScript • Patient Services",
     status: "Completed",
-    image: "/images/heartbeat.png",
+    image: "/images/medsathi.png",
   },
   {
     title: "Provider Data Cleaner",
@@ -35,7 +36,7 @@ const projects = [
     tools: "React, Python, CSV Processing, Google Maps API",
     highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
     status: "Completed",
-    image: "/images/skill.png",
+    image: "/images/cleaner.png",
   },
   {
     title: "Smart Resume Screening & Ranking",
