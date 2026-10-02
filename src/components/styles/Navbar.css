@@ -104,3 +104,23 @@
     font-size: 17px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 10px 12px;
+    border-radius: 12px;
+    top: 8px;
+    width: calc(100% - 1rem);
+  }
+
+  .header ul {
+    font-size: 10px;
+    column-gap: 6px;
+    row-gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-title {
+    font-size: 12px;
+  }
+}

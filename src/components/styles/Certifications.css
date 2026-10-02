@@ -66,11 +66,24 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .cert-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .cert-container {
     padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .cert-card h4 {
+    font-size: 0.85rem;
+  }
+  .cert-section h2 {
+    font-size: 1.5rem;
   }
 }

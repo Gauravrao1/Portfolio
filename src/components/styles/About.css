@@ -157,6 +157,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .about-section {
+    padding: 3rem 0 2rem;
+  }
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -168,5 +171,26 @@
   }
   .about-panel {
     padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-panel h3 {
+    font-size: 1.4rem;
+  }
+  .about-bio {
+    font-size: 0.85rem;
+  }
+  .about-card h4 {
+    font-size: 0.9rem;
+  }
+  .about-card p {
+    font-size: 0.78rem;
+  }
+  .about-info-item {
+    min-width: 120px;
+  }
+  .about-info-value {
+    font-size: 0.82rem;
   }
 }

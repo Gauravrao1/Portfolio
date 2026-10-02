@@ -1,5 +1,8 @@
 .section-container {
   width: 1300px;
+  max-width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ::selection {
@@ -17,17 +20,23 @@
 @media only screen and (max-width: 1600px) {
   .section-container {
     width: 1200px;
-    max-width: calc(100% - 160px);
+    max-width: calc(100% - 4rem);
   }
 }
 @media only screen and (max-width: 1400px) {
   .section-container {
     width: 900px;
+    max-width: calc(100% - 3rem);
   }
 }
 @media only screen and (max-width: 900px) {
   .section-container {
-    width: 500px;
-    max-width: var(--cWidth);
+    width: 100%;
+    max-width: calc(100% - 2rem);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-container {
+    max-width: calc(100% - 1.5rem);
   }
 }

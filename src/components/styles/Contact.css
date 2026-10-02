@@ -80,6 +80,18 @@ a.contact-social {
     padding: 2rem 0 3rem;
   }
   .contact-container {
-    width: calc(100% - 25px);
+    padding: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-section h3 {
+    font-size: 1.4rem;
+  }
+  .contact-box h2 {
+    font-size: 0.95rem;
+  }
+  a.contact-social {
+    font-size: 0.95rem;
   }
 }

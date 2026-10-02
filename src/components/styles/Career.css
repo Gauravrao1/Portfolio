@@ -137,4 +137,35 @@
   .career-timeline {
     left: 0%;
   }
+  .career-container {
+    padding: 1.2rem;
+  }
+  .career-info h3 {
+    font-size: 1.3rem;
+  }
+  .career-info h4 {
+    font-size: 0.95rem;
+  }
+  .career-info h5 {
+    font-size: 0.85rem;
+  }
+  .career-info-box p {
+    font-size: 0.85rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .career-container {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+  .career-section h2 {
+    font-size: 1.6rem;
+  }
+  .career-info h3 {
+    font-size: 1.1rem;
+  }
+  .career-info-in {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
 }
