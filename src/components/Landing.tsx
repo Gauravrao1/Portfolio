@@ -1,34 +1,62 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {
+  const [portraitFailed, setPortraitFailed] = useState(false);
+
   return (
-    <>
-      <div className="landing-section" id="landingDiv">
-        <div className="landing-container">
-          <div className="landing-intro">
-            <h2>Hello! I'm</h2>
-            <h1>
-              GAURAV
-              <br />
-              <span>RAO</span>
-            </h1>
+    <div className="landing-section" id="landingDiv">
+      <div className="landing-container">
+        <div className="landing-intro">
+          <div className="landing-badge">AI / ML • Data Analytics • Software Engineering</div>
+          <h1>GAURAV<br />RAO</h1>
+          <p className="landing-lead">
+            I build practical projects in AI, data analytics, full-stack development, and software engineering. My work includes NLP, computer vision, machine learning, Java, DSA. I enjoy turning ideas into useful applications, intelligent systems, and real-world solutions.
+          </p>
+          <div className="landing-cta-row">
+            <a href="#work" className="landing-cta-primary" data-cursor="disable">View Projects</a>
+            <a href="#contact" className="landing-cta-secondary" data-cursor="disable">Get In Touch</a>
           </div>
-          <div className="landing-info">
-            <h3>AI & Data Science</h3>
-            <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Problem Solver</div>
-              <div className="landing-h2-2">Project Builder</div>
-            </h2>
-            <h2>
-              <div className="landing-h2-info">DSA</div>
-              <div className="landing-h2-info-1">Hackathons</div>
-            </h2>
+          <div className="landing-stats-row">
+            <div className="landing-stat">
+              <span className="landing-stat-num">67+</span>
+              <span className="landing-stat-label">Repositories</span>
+            </div>
+            <div className="landing-stat">
+              <span className="landing-stat-num">5★</span>
+              <span className="landing-stat-label">HackerRank Java</span>
+            </div>
+            <div className="landing-stat">
+              <span className="landing-stat-num">🏆</span>
+              <span className="landing-stat-label">Hackathon Winner</span>
+            </div>
           </div>
         </div>
-        {children}
+
+        <div className="landing-center" aria-hidden="true">
+          <div className="landing-portrait-wrap">
+            {!portraitFailed ? (
+              <img
+                className="landing-portrait"
+                src="/images/profile.png"
+                alt="Portrait of Gaurav Rao"
+                onError={() => setPortraitFailed(true)}
+              />
+            ) : (
+              <div className="landing-portrait-fallback">
+                <div className="fallback-orb" />
+                <div className="fallback-face">
+                  <div className="fallback-hair" />
+                  <div className="fallback-glasses" />
+                  <div className="fallback-body" />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-    </>
+      {children}
+    </div>
   );
 };
 

@@ -13,47 +13,45 @@ const setCharacter = (
   dracoLoader.setDecoderPath("/draco/");
   loader.setDRACOLoader(dracoLoader);
 
-  const loadCharacter = () => {
-    return new Promise<GLTF | null>(async (resolve, reject) => {
-      try {
-        const encryptedBlob = await decryptFile(
-          "/models/character.enc",
-          "Character3D#@"
-        );
-        const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
-
-        let character: THREE.Object3D;
+  const loadCharacter = async (): Promise<GLTF | null> => {
+    try {
+      const encryptedBlob = await decryptFile(
+        "/models/character.enc",
+        "Character3D#@"
+      );
+      const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
+      return await new Promise<GLTF>((resolve, reject) => {
         loader.load(
           blobUrl,
           async (gltf) => {
-            character = gltf.scene;
+            const character = gltf.scene;
             await renderer.compileAsync(character, camera, scene);
-            character.traverse((child: any) => {
-              if (child.isMesh) {
-                const mesh = child as THREE.Mesh;
+            character.traverse((child) => {
+              if (child instanceof THREE.Mesh) {
                 child.castShadow = true;
                 child.receiveShadow = true;
-                mesh.frustumCulled = true;
+                child.frustumCulled = true;
               }
             });
-            resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
-            character!.getObjectByName("footR")!.position.y = 3.36;
-            character!.getObjectByName("footL")!.position.y = 3.36;
+            character.getObjectByName("footR")!.position.y = 3.36;
+            character.getObjectByName("footL")!.position.y = 3.36;
             dracoLoader.dispose();
+            URL.revokeObjectURL(blobUrl);
+            resolve(gltf);
           },
           undefined,
           (error) => {
-            console.error("Error loading GLTF model:", error);
+            URL.revokeObjectURL(blobUrl);
             reject(error);
           }
         );
-      } catch (err) {
-        reject(err);
-        console.error(err);
-      }
-    });
+      });
+    } catch (err) {
+      console.error("Error loading GLTF model:", err);
+      return null;
+    }
   };
 
   return { loadCharacter };

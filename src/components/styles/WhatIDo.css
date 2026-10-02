@@ -385,6 +385,97 @@
     margin: 0;
   }
 }
+
+@media only screen and (max-width: 1024px), (orientation: portrait) {
+  .whatIDO {
+    width: var(--cWidth);
+    height: auto;
+    padding: 4rem 0 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.4rem;
+  }
+
+  .what-box {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .what-box h2 {
+    margin: 0;
+    font-size: clamp(2.8rem, 11vw, 5rem);
+    line-height: 0.92;
+  }
+
+  .what-box-in {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    gap: 0.9rem;
+  }
+
+  .what-content {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 1.15rem 1rem;
+  }
+
+  .what-noTouch:hover,
+  .what-content-active,
+  .what-noTouch:hover ~ .what-content,
+  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content.what-sibling {
+    min-height: auto;
+    padding: 1.15rem 1rem;
+  }
+
+  .what-content h3 {
+    font-size: 1.9rem;
+  }
+
+  .what-content p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .what-tags {
+    font-size: 0.78rem;
+  }
+
+  .what-content h5,
+  .what-content-flex {
+    opacity: 1;
+  }
+
+  .what-border1,
+  .what-border2,
+  .what-arrow,
+  .what-corner {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 720px) and (orientation: landscape) {
+  .whatIDO {
+    height: auto;
+    padding: 3rem 0;
+    align-items: start;
+  }
+
+  .what-box h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .what-box-in {
+    height: auto;
+  }
+}
+
 @media only screen and (min-width: 1950px) {
   .what-box h2 {
     font-size: 7rem;

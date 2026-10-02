@@ -10,6 +10,8 @@ export let smoother: ScrollSmoother;
 
 const Navbar = () => {
   useEffect(() => {
+    document.body.style.overflow = "auto";
+
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -21,16 +23,16 @@ const Navbar = () => {
     });
 
     smoother.scrollTop(0);
-    smoother.paused(true);
+    smoother.paused(false);
 
-    let links = document.querySelectorAll(".header ul a");
+    const links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
+      const element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
         if (window.innerWidth > 1024) {
           e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
+          const elem = e.currentTarget as HTMLAnchorElement;
+          const section = elem.getAttribute("data-href");
           smoother.scrollTo(section, true, "top top");
         }
       });
@@ -61,6 +63,11 @@ const Navbar = () => {
           <li>
             <a data-href="#work" href="#work">
               <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#achievements" href="#achievements">
+              <HoverLinks text="ACHIEVEMENTS" />
             </a>
           </li>
           <li>

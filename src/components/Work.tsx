@@ -7,114 +7,116 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-{
-title: "AI-Based Vital Analysis & Health Prediction System",
-category: "Healthcare AI",
-description:
-"AI-powered healthcare analytics platform that monitors vital parameters and predicts possible health conditions using machine learning models.",
-tools:
-"Python, Machine Learning, Pandas, Data Analysis",
-highlights:
-"Health Monitoring • Prediction Engine • Dashboard • Data Visualization",
-status: "Completed",
-},
-
-{
-title: "Aadhaar Societal Trend Analytics",
-category: "Hackathon Project",
-description:
-"Data-driven analytics solution focused on identifying societal trends and generating actionable insights from structured datasets.",
-tools:
-"SQL, Python, Data Visualization",
-highlights:
-"Analytics • Dashboard • Data Processing • Trend Detection",
-status: "Completed",
-},
-
-{
-title: "AI Enhanced Citizen Pollution Monitor",
-category: "Environmental Analytics",
-description:
-"Smart monitoring system that analyzes pollution data and provides meaningful environmental insights.",
-tools:
-"Python, APIs, ML, Visualization",
-highlights:
-"Pollution Tracking • Prediction • Reports • Visualization",
-status: "Completed",
-},
-
-{
-title: "Deepfake Detection System",
-category: "Computer Vision",
-description:
-"AI-based system designed to detect manipulated images and media using machine learning techniques.",
-tools:
-"Python, OpenCV, ML",
-highlights:
-"Image Analysis • Detection • AI Security",
-status: "Completed",
-},
-
-{
-title: "Attendance with Face Recognition",
-category: "Automation",
-description:
-"Automated attendance system using computer vision and facial recognition technology.",
-tools:
-"Python, OpenCV, Face Recognition",
-highlights:
-"Face Detection • Attendance Automation • Records",
-status: "Completed",
-},
-
-{
-title: "Predictive Analytics for Machine Maintenance",
-category: "Predictive Maintenance",
-description:
-"Machine learning solution developed to predict machine failures and optimize maintenance schedules.",
-tools:
-"Python, Machine Learning, Analytics",
-highlights:
-"Prediction • Industrial Analytics • Monitoring",
-status: "Completed",
-},
+  {
+    title: "Adaptive 2.5D LiDAR Mapping — PointPilot",
+    category: "AI / Computer Vision",
+    description:
+      "Variable-resolution LiDAR mapping system for dynamic environment perception using semantic classification and adaptive polar grids.",
+    tools: "Python, PyTorch, PointNet, SemanticKITTI, Plotly, Dash",
+    highlights: "Semantic Segmentation • Adaptive Resolution • 2.5D Grid • Visualization",
+    status: "In Progress",
+    image: "/images/airpollution (2).png",
+  },
+  {
+    title: "Med-Sathi — Healthcare Platform",
+    category: "Full-Stack",
+    description:
+      "Full-stack healthcare application built with TypeScript for patient-facing digital health services.",
+    tools: "TypeScript, React, Node.js, REST APIs",
+    highlights: "Healthcare • Full-Stack • TypeScript • Patient Services",
+    status: "Completed",
+    image: "/images/heartbeat.png",
+  },
+  {
+    title: "Provider Data Cleaner",
+    category: "Data Engineering",
+    description:
+      "Data-cleaning application for CSV provider data with validation, anomaly detection, and automated cleaning pipeline.",
+    tools: "React, Python, CSV Processing, Google Maps API",
+    highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
+    status: "Completed",
+    image: "/images/skill.png",
+  },
+  {
+    title: "Smart Resume Screening & Ranking",
+    category: "NLP / AI",
+    description:
+      "AI-powered recruitment tool using NLP and semantic embeddings to match resumes to job descriptions and rank candidates.",
+    tools: "Python, NLP, Sentence Transformers, Scikit-learn, FAISS",
+    highlights: "Semantic Matching • Candidate Ranking • Skill Extraction",
+    status: "Completed",
+    image: "/images/aidtector.png",
+  },
+  {
+    title: "Skill Enhancement Platform",
+    category: "Full-Stack EdTech",
+    description:
+      "Django-based learning platform with authentication, course management, progress tracking and skill-gap recommendations.",
+    tools: "Python, Django, MySQL, JavaScript, jQuery",
+    highlights: "Authentication • Course Management • Progress Tracking • Recommendations",
+    status: "Completed",
+    image: "/images/skill.png",
+  },
+  {
+    title: "Civic Issue Management Platform",
+    category: "Full-Stack / Civic Tech",
+    description:
+      "Platform enabling citizens to submit, track, and resolve civic issues with role-based access and REST API architecture.",
+    tools: "Python, Django, MySQL, REST APIs, jQuery",
+    highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
+    status: "Completed",
+    image: "/images/airpollution (1).png",
+  },
+  {
+    title: "Deepfake Detection System",
+    category: "Computer Vision",
+    description:
+      "AI-based system to detect manipulated media using CNN-based classification on extracted video frames.",
+    tools: "Python, OpenCV, CNN, Deep Learning",
+    highlights: "Frame Extraction • CNN Classification • Real vs Fake",
+    status: "Completed",
+    image: "/images/aidtector.png",
+  },
+  {
+    title: "AI Vital Analysis & Health Prediction",
+    category: "Healthcare AI",
+    description:
+      "Machine learning system predicting health risks based on patient vitals using classification models.",
+    tools: "Python, Scikit-learn, Pandas, MySQL",
+    highlights: "Health Prediction • Vital Monitoring • ML Models",
+    status: "Completed",
+    image: "/images/heartbeat.png",
+  },
 ];
+
 const Work = () => {
   useEffect(() => {
-    let translateX: number = 0;
+    const workFlex = document.querySelector<HTMLElement>(".work-flex");
+    const workSection = document.querySelector<HTMLElement>(".work-section");
+    if (!workFlex || !workSection) return;
 
-    function setTranslateX() {
-      const box = document.getElementsByClassName("work-box");
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-    }
+    const media = gsap.matchMedia();
+    media.add("(min-width: 1026px)", () => {
+      const translateX = Math.max(0, workFlex.scrollWidth - workFlex.clientWidth);
+      if (translateX === 0) return undefined;
 
-    setTranslateX();
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: workSection,
+          start: "top top",
+          end: `+=${translateX}`,
+          scrub: 0.6,
+          pin: true,
+          id: "work",
+        },
+      });
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: `+=${translateX}`,
-        scrub: true,
-        pin: true,
-        id: "work",
-      },
-    });
-
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
+      timeline.to(workFlex, { x: -translateX, ease: "none" });
+      return () => timeline.kill();
     });
 
     return () => {
-      timeline.kill();
+      media.revert();
       ScrollTrigger.getById("work")?.kill();
     };
   }, []);
@@ -122,9 +124,12 @@ const Work = () => {
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
-        <h2>
-          My <span>Work</span>
-        </h2>
+        <div className="work-header">
+          <div className="about-kicker">Selected work</div>
+          <h2>
+            Projects shaped by <span>curiosity</span> and craft.
+          </h2>
+        </div>
         <div className="work-flex">
           {projects.map((project, index) => (
             <div className="work-box" key={index}>
@@ -136,11 +141,15 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
+                <div className="work-meta">
+                  <span className="work-status">{project.status}</span>
+                  <span className="work-category">{project.category}</span>
+                </div>
+                <p className="work-description">{project.description}</p>
+                <p className="work-tools">{project.tools}</p>
+                <p className="work-highlights">{project.highlights}</p>
               </div>
-              <WorkImage image="/images/aidtector.png" alt="" />
-              
+              <WorkImage image={project.image} alt={project.title} />
             </div>
           ))}
         </div>

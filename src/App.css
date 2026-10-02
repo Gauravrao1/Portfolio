@@ -1,6 +1,11 @@
 .section-container {
   width: 1300px;
 }
+
+::selection {
+  color: #fffaf2;
+  background: var(--accentColor);
+}
 .title,
 .para {
   font-kerning: none;

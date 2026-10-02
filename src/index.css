@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-font-family: "Space Grotesk", sans-serif;
-
+  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
   scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: #eae5ec;
+  color-scheme: light;
+  color: #252321;
   background-color: var(--backgroundColor);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,48 +16,112 @@ font-family: "Space Grotesk", sans-serif;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
-  --backgroundColor: #0b080c;
+  --accentColor: #c8664b;
+  --backgroundColor: #f4f0e8;
+  --panelColor: rgba(255, 252, 246, 0.78);
+  --borderColor: rgba(48, 42, 36, 0.14);
+  --textSoft: #716a62;
+  --inkColor: #252321;
+  --sageColor: #60766a;
   --vh: 100vh;
   --vh: 100svh;
+  --gradientStart: #c8664b;
+  --gradientEnd: #b78bff;
+  --cardBg: rgba(255, 252, 246, 0.65);
+  --cardBorder: rgba(48, 42, 36, 0.12);
+  --glowColor: rgba(200, 102, 75, 0.15);
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Syne", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", sans-serif;
 }
+
 body {
   overflow: hidden;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--accentColor);
-}
-main {
-  opacity: 1;
-  transition: 0.3s;
-}
-.main-active {
-  opacity: 0;
-  animation: fadeIn 1s 1;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-body {
   margin: 0;
   height: auto;
-  background-color: #000;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(224, 176, 128, 0.2), transparent 28%),
+    radial-gradient(circle at 92% 18%, rgba(125, 151, 130, 0.16), transparent 26%),
+    linear-gradient(135deg, #f7f3eb 0%, #efe9df 55%, #f4f0e8 100%);
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;
   max-width: 100vw;
   overflow-x: hidden;
+  color: var(--inkColor);
 }
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.55;
+  animation: drift 12s ease-in-out infinite alternate;
+}
+
+body::before {
+  width: 24rem;
+  height: 24rem;
+  left: -6rem;
+  top: 8rem;
+  background: rgba(221, 157, 116, 0.24);
+}
+
+body::after {
+  width: 20rem;
+  height: 20rem;
+  right: -3rem;
+  top: 20rem;
+  background: rgba(114, 145, 124, 0.18);
+  animation-duration: 16s;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(2rem, 1.5rem, 0) scale(1.08);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--accentColor);
+}
+
+main {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.main-active {
+  opacity: 0;
+  animation: fadeIn 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -69,16 +131,20 @@ body {
   width: 100%;
   margin: auto;
   position: relative;
+  isolation: isolate;
 }
+
 .container1 {
   width: var(--cWidth);
   height: var(--vh);
   margin: auto;
   position: relative;
 }
+
 .split-line {
   overflow: hidden;
 }
+
 .split-h2 {
   overflow: hidden;
   display: flex;
@@ -111,8 +177,31 @@ body {
     --cWidth: 94%;
   }
 }
+
 @media screen and (max-width: 900px) {
   .techstack h2 {
     font-size: 40px;
   }
+}
+
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 102, 75, 0.28);
+  background: rgba(200, 102, 75, 0.08);
+  color: var(--accentColor);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

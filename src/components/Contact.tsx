@@ -5,7 +5,10 @@ const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
-        <h3>Contact</h3>
+        <div className="contact-intro">
+          <div className="about-kicker">Let's connect</div>
+          <h3>Open for ambitious ideas, collaborations, and thoughtful builds.</h3>
+        </div>
         <div className="contact-flex">
           <div className="contact-box">
             <h4>Email</h4>
@@ -14,17 +17,14 @@ const Contact = () => {
                 gauravraorao6@gmail.com
               </a>
             </p>
-            <h4>GitHub</h4>
+            <h4>Phone</h4>
             <p>
-              <a
-                href="https://github.com/Gauravrao1"
-                target="_blank"
-                data-cursor="disable"
-                rel="noreferrer"
-              >
-                github.com/Gauravrao1
+              <a href="tel:+918400133970" data-cursor="disable">
+                +91 8400133970
               </a>
             </p>
+            <h4>Location</h4>
+            <p>Lucknow, Uttar Pradesh, India</p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
@@ -44,15 +44,37 @@ const Contact = () => {
               rel="noreferrer"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              LinkedIn <MdArrowOutward />
             </a>
-            <a href="mailto:gauravraorao6@gmail.com" data-cursor="disable" className="contact-social">
+            <a
+              href="https://leetcode.com/u/gauravrao6/"
+              target="_blank"
+              data-cursor="disable"
+              rel="noreferrer"
+              className="contact-social"
+            >
+              LeetCode <MdArrowOutward />
+            </a>
+            <a
+              href="https://www.hackerrank.com/profile/gauravrao6"
+              target="_blank"
+              data-cursor="disable"
+              rel="noreferrer"
+              className="contact-social"
+            >
+              HackerRank <MdArrowOutward />
+            </a>
+            <a
+              href="mailto:gauravraorao6@gmail.com"
+              data-cursor="disable"
+              className="contact-social"
+            >
               Email <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Gaurav Rao</span>
+              Designed and developed <br /> by <span>Gaurav Rao</span>
             </h2>
             <h5>
               <MdCopyright /> 2026
