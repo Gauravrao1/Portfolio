@@ -3,6 +3,7 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import { MdArrowOutward } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,17 +17,18 @@ const projects = [
     highlights: "Semantic Segmentation • Adaptive Resolution • 2.5D Grid • Visualization",
     status: "In Progress",
     image: "/images/Adaptive.png",
-    
+    liveLink: "https://lidar2-5-rags2.vercel.app/",
   },
   {
     title: "Med-Sathi — Healthcare Platform",
     category: "Full-Stack",
     description:
       "Full-stack healthcare application built with TypeScript for patient-facing digital health services.",
-    tools: "TypeScript, React, Node.js, REST APIs",
+    epoLink: "https://github.com/Gauravrao1",tools: "TypeScript, React, Node.js, REST APIs",
     highlights: "Healthcare • Full-Stack • TypeScript • Patient Services",
     status: "Completed",
     image: "/images/medsathi.png",
+    liveLink: "https://med-sathi-frontend-qqybhd90o-rags2.vercel.app/",
   },
   {
     title: "Provider Data Cleaner",
@@ -37,6 +39,8 @@ const projects = [
     highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
     status: "Completed",
     image: "/images/cleaner.png",
+    liveLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1",
   },
   {
     title: "Smart Resume Screening & Ranking",
@@ -47,6 +51,8 @@ const projects = [
     highlights: "Semantic Matching • Candidate Ranking • Skill Extraction",
     status: "Completed",
     image: "/images/aidtector.png",
+    liveLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1",
   },
   {
     title: "Skill Enhancement Platform",
@@ -57,6 +63,7 @@ const projects = [
     highlights: "Authentication • Course Management • Progress Tracking • Recommendations",
     status: "Completed",
     image: "/images/skill.png",
+    liveLink: "https://skill-enhancement-platform-server-h.vercel.app/",
   },
   {
     title: "Civic Issue Management Platform",
@@ -67,6 +74,8 @@ const projects = [
     highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
     status: "Completed",
     image: "/images/airpollution (1).png",
+    liveLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1",
   },
   {
     title: "Deepfake Detection System",
@@ -77,6 +86,8 @@ const projects = [
     highlights: "Frame Extraction • CNN Classification • Real vs Fake",
     status: "Completed",
     image: "/images/aidtector.png",
+    liveLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1",
   },
   {
     title: "AI Vital Analysis & Health Prediction",
@@ -87,6 +98,8 @@ const projects = [
     highlights: "Health Prediction • Vital Monitoring • ML Models",
     status: "Completed",
     image: "/images/heartbeat.png",
+    liveLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1",
   },
 ];
 
@@ -149,6 +162,30 @@ const Work = () => {
                 <p className="work-description">{project.description}</p>
                 <p className="work-tools">{project.tools}</p>
                 <p className="work-highlights">{project.highlights}</p>
+                <div className="work-links">
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-link-btn"
+                      data-cursor="disable"
+                    >
+                      Live Demo <MdArrowOutward />
+                    </a>
+                  )}
+                  {project.repoLink && (
+                    <a
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-link-btn work-link-secondary"
+                      data-cursor="disable"
+                    >
+                      GitHub <MdArrowOutward />
+                    </a>
+                  )}
+                </div>
               </div>
               <WorkImage image={project.image} alt={project.title} />
             </div>
