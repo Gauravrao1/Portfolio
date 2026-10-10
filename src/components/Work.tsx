@@ -39,7 +39,6 @@ const projects = [
     highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
     status: "Completed",
     image: "/images/cleaner.png",
-    liveLink: "https://github.com/Gauravrao1",
     repoLink: "https://github.com/Gauravrao1",
   },
   {
@@ -51,7 +50,6 @@ const projects = [
     highlights: "Semantic Matching • Candidate Ranking • Skill Extraction",
     status: "Completed",
     image: "/images/aidtector.png",
-    liveLink: "https://github.com/Gauravrao1",
     repoLink: "https://github.com/Gauravrao1",
   },
   {
@@ -74,7 +72,6 @@ const projects = [
     highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
     status: "Completed",
     image: "/images/airpollution (1).png",
-    liveLink: "https://github.com/Gauravrao1",
     repoLink: "https://github.com/Gauravrao1",
   },
   {
@@ -98,7 +95,6 @@ const projects = [
     highlights: "Health Prediction • Vital Monitoring • ML Models",
     status: "Completed",
     image: "/images/heartbeat.png",
-    liveLink: "https://github.com/Gauravrao1",
     repoLink: "https://github.com/Gauravrao1",
   },
 ];
