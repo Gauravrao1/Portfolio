@@ -5,32 +5,22 @@ const certifications = [
   {
     title: "Oracle Cloud Infrastructure AI Foundations",
     issuer: "Oracle",
-    credentialLink: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/1l-bSxdJDcBo53UROK9ZfQjbeACNjZTLU/view?usp=sharing",
   },
   {
     title: "Google Data Analytics Professional",
     issuer: "Google / Coursera",
-    credentialLink: "https://www.coursera.org/account/accomplishments/YOUR_ID",
-  },
-  {
-    title: "Oracle Database Foundations",
-    issuer: "Oracle",
-    credentialLink: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=YOUR_ID",
-  },
-  {
-    title: "Databases for Developers: Foundations",
-    issuer: "Oracle",
-    credentialLink: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/1pY29caCAk8qWOVWunYMu30vt2tJ_XbvU/view?usp=sharing",
   },
   {
     title: "Clean, Refine & Visualize Data",
     issuer: "IBM SkillsBuild",
-    credentialLink: "https://www.credly.com/badges/YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/1vjFxv-pIqEUGpB5Wv8DPk6O1zFJq8YGi/view?usp=sharing",
   },
   {
     title: "Introduction to Machine Learning",
     issuer: "Kaggle",
-    credentialLink: "https://www.kaggle.com/learn/certification/YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/1Z3edHo2OkTUtxFQDnMYYIvZCMFVkXgo2/view?usp=sharing",
   },
   {
     title: "Data Analytics",
@@ -38,24 +28,24 @@ const certifications = [
     credentialLink: "https://moonshot.scaler.com/s/YOUR_ID",
   },
   {
-    title: "Java Certification",
-    issuer: "Scaler",
-    credentialLink: "https://moonshot.scaler.com/s/YOUR_ID",
+    title: "Java Certification(Tranning)",
+    issuer: "Intershala",
+    credentialLink: "https://drive.google.com/file/d/136-fM2jmH2WItjWtdrR2nl8BK4BKWXKU/view?usp=sharing",
   },
   {
-    title: "Spring Boot Development",
-    issuer: "freeCodeCamp",
-    credentialLink: "https://www.freecodecamp.org/certification/YOUR_ID",
+    title: "TCS iON Career Edge - Young Professional",
+    issuer: "Tcs",
+    credentialLink: "https://drive.google.com/file/d/1k0_lWF5s_ENZREpY9F-LPbZcRY6vWcMq/view?usp=sharing",
   },
   {
     title: "Oracle Dev Gym",
     issuer: "Oracle",
-    credentialLink: "https://devgym.oracle.com/pls/apex/f?p=10001:YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/1mCDtZMARxVKUNtBwVwx5BMD6e7gOw_Ig/view?usp=sharing",
   },
   {
-    title: "Java Training",
+    title: "Cognizant Technoverse round 1 winner",
     issuer: "Internshala",
-    credentialLink: "https://trainings.internshala.com/s/YOUR_ID",
+    credentialLink: "https://drive.google.com/file/d/13WmgwNupt8XxkqHRQZgRkJNq-yFShJ2C/view?usp=sharing",
   },
 ];
 
