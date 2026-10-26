@@ -72,7 +72,7 @@ const projects = [
     tools: "Python, Django, MySQL, REST APIs, jQuery",
     highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
     status: "Completed",
-    image: "/images/airpollution (1).png",
+    image: "/images/civic.issue.jpeg",
     repoLink: "https://github.com/Gauravrao1",
   },
   {
