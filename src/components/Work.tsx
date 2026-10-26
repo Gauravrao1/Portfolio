@@ -73,7 +73,9 @@ const projects = [
     highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
     status: "Completed",
     image: "/images/civic.issue.jpeg",
-    repoLink: "https://github.com/Gauravrao1",
+    repoLink: "https://github.com/Gauravrao1/Civic_issue_mangment_server.git",
+    liveLink: "https://civic-issue-mangment-client.vercel.app/",
+
   },
   {
     title: "Deepfake Detection System",
