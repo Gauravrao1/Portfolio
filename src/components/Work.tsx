@@ -39,7 +39,7 @@ const projects = [
     highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
     status: "Completed",
     image: "/images/cleaner.png",
-    repoLink: "https://github.com/Gauravrao1",
+    liveLink: "https://smart-resume-screening-and-candidat-sandy.vercel.app/",
   },
   {
     title: "Smart Resume Screening & Ranking",
@@ -50,7 +50,6 @@ const projects = [
     highlights: "Semantic Matching • Candidate Ranking • Skill Extraction",
     status: "Completed",
     image: "/images/smartresume.png",
-    repoLink: "https://github.com/Gauravrao1/Smart-Resume-Screening-and-Candidate-Ranking-Tool.git",
     liveLink: "https://smart-resume-screening-and-candidat-sandy.vercel.app/",
   },
   {
@@ -73,7 +72,6 @@ const projects = [
     highlights: "Issue Tracking • Role-Based Access • API Architecture • Query Optimization",
     status: "Completed",
     image: "/images/civic.issue.jpeg",
-    repoLink: "https://github.com/Gauravrao1/Civic_issue_mangment_server.git",
     liveLink: "https://civic-issue-mangment-client.vercel.app/",
 
   },
