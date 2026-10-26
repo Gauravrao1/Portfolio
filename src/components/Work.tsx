@@ -49,8 +49,9 @@ const projects = [
     tools: "Python, NLP, Sentence Transformers, Scikit-learn, FAISS",
     highlights: "Semantic Matching • Candidate Ranking • Skill Extraction",
     status: "Completed",
-    image: "/images/aidtector.png",
-    repoLink: "https://github.com/Gauravrao1",
+    image: "/images/smartresume.png",
+    repoLink: "https://github.com/Gauravrao1/Smart-Resume-Screening-and-Candidate-Ranking-Tool.git",
+    liveLink: "https://smart-resume-screening-and-candidat-sandy.vercel.app/",
   },
   {
     title: "Skill Enhancement Platform",
