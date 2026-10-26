@@ -8,6 +8,18 @@ import { MdArrowOutward } from "react-icons/md";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+   {
+    title: "Deepfake Detection System",
+    category: "Computer Vision",
+    description:
+      "AI-based system to detect manipulated media using CNN-based classification on extracted video frames.",
+    tools: "Python, OpenCV, CNN, Deep Learning",
+    highlights: "Frame Extraction • CNN Classification • Real vs Fake",
+    status: "Completed",
+    image: "/images/aidtector.png",
+    liveLink: "https://senitabledeepfake.vercel.app/login",
+  
+  },
   {
     title: "Adaptive 2.5D LiDAR Mapping — PointPilot",
     category: "AI / Computer Vision",
@@ -74,18 +86,6 @@ const projects = [
     image: "/images/civic.issue.jpeg",
     liveLink: "https://civic-issue-mangment-client.vercel.app/",
 
-  },
-  {
-    title: "Deepfake Detection System",
-    category: "Computer Vision",
-    description:
-      "AI-based system to detect manipulated media using CNN-based classification on extracted video frames.",
-    tools: "Python, OpenCV, CNN, Deep Learning",
-    highlights: "Frame Extraction • CNN Classification • Real vs Fake",
-    status: "Completed",
-    image: "/images/aidtector.png",
-    liveLink: "https://github.com/Gauravrao1",
-    repoLink: "https://github.com/Gauravrao1",
   },
   {
     title: "AI Vital Analysis & Health Prediction",
