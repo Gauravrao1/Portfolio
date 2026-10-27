@@ -51,7 +51,7 @@ const projects = [
     highlights: "Data Validation • Automation • Dashboard • CSV Pipeline",
     status: "Completed",
     image: "/images/cleaner.png",
-    liveLink: "https://smart-resume-screening-and-candidat-sandy.vercel.app/",
+    liveLink: "https://providerdatacleaner.vercel.app/",
   },
   {
     title: "Smart Resume Screening & Ranking",
